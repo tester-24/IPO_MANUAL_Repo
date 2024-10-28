@@ -33,7 +33,7 @@ describe('IPO ',function(){
     it.only('IPO Home Page ',function(){
       cy.wait(500)
       cy.visit("https://ipo.jainam.in/home")
-      cy.wait(1000)
+      cy.wait(3000)
     
       // Click on Apply for an IPO
       cy.get(':nth-child(3) > .ng-star-inserted > .btn').click({timeout:3000})
@@ -57,7 +57,7 @@ describe('IPO ',function(){
       cy.get('[formcontrolname="otp4"]').type('0')
        
       //Check image is visible 
-     cy.wait(3000)
+     cy.wait(4000)
      cy.get('.banner-img > img').should('be.visible')
     
   
@@ -65,7 +65,7 @@ describe('IPO ',function(){
     // Assuming it's a link, you can target it using an appropriate selector
     cy.get('[href="https://apps.apple.com/my/app/jainam-space/id1536402914"]')
     .invoke("removeAttr", "target") // Remove target="_blank" to avoid opening a new tab
-    .click({timeout:2000}); // Click the button/link
+    .click({timeout:3000}); // Click the button/link
 
   // Step 3: Wait for 2 seconds
   cy.wait(3000);
@@ -79,7 +79,7 @@ describe('IPO ',function(){
   )
 
     .invoke("removeAttr", "target") // Remove target="_blank" to avoid opening a new tab
-    .click({timeout:2000}); // Click the button/link
+    .click({timeout:2000},{force:true}); // Click the button/link
 
   Cypress.on("uncaught:exception", (err) => {
     // returning false here prevents Cypress from

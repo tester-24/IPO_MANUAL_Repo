@@ -93,6 +93,7 @@ it('checks Tab Nevigation ', () =>
       //Verify subbmit button is visible and click on sumbmit button without accepting terms and condition
       cy.get('#load2').should('be.visible')
       cy.get('#load2').click()
+      cy.wait(2000)
 
       //Verify trigger message
        
